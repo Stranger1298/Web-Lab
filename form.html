@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            font-family: Helvetica,Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20;
+        }
+        .form{
+            border-collapse: collapse;
+            border: 2px solid black;
+            width: 40%;
+            padding: 10px;
+        }
+        tr{
+            border: 1px solid black;
+        }
+        table{
+            padding: 10px;
+        }
+        #form{
+            width: 80%;
+            height: 100px;
+            overflow-y: scroll;
+        }
+        .hero{
+            align-items:start;
+        }
+        hr{
+            border: 3px solid black;
+        }
+        .grey{
+            background-color: rgb(181, 179, 179);
+        }
+        .lgrey{
+            background-color: rgb(234, 233, 233);
+        }
+        button:hover{
+            border-color: blue;
+        }
+        button{
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <div class="form">
+        <div class="hero">
+            <h3 class="grey">Please enter the following information</h3>
+            <table>
+            <tr><label for="name">First Name:</label><input type="text" id="fname"></label></tr>
+            <tr><label for="name">Last Name:</label><input type="text" id="lname"></label></tr>
+            <tr><label for="name">Title:</label><input type="text" id="title"></label></tr>
+            <tr><label for="name">Email:</label><input type="email" id="email"></label></tr>
+            <tr><label for="name">Company:</label><input type="text" id="company"></label></tr>
+        </table>
+        </div>
+    
+<hr>
+    <h3 class="grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+    <h3>How much of the eloqua online training did you complete?</h3>
+    <div class="lgrey">
+        <label for="training">0%</label>
+        <input type="radio" name="training" id="">
+        <label for="training">25%</label>
+        <input type="radio" name="training" id="">
+        <label for="training">75%</label>
+        <input type="radio" name="training" id="">
+        <label for="training">100%</label>
+        <input type="radio" name="training" id="">
+    </div>
+
+    
+        <h3>How much of the eloqua online training did you complete?</h3>
+    <div class="lgrey">
+        <label for="training">Disagree</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Partially Agree</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Agree</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Strongly Agree</label>
+        <input type="radio" name="training" id="">
+    
+    </div>
+
+    <h3>How much of the eloqua online training did you complete?</h3>
+    <div class="lgrey">
+        <label for="training">No Experience</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Basic</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Intermediate</label>
+        <input type="radio" name="training" id="">
+        <label for="training">Advanced</label>
+        <input type="radio" name="training" id="">
+    
+    </div>
+<hr>
+<h3 class="grey">Additional Comments</h3>
+<input type="text" id="form">
+</div>
+<button type="submit">Submit</button>
+<p>Thankyou for submitting your feedback.Your input will help us ensure the best training.</p>
+</body>
+</html>
