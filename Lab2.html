@@ -1,63 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body{
+            font-family: Helvetica,Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+        .lab-hours{
+            background-color: #ffcccb;
+        }
+        .elective-hours{
+            background-color: #90ee90;
+        }
+        .lunch{
+            background-color: #ffd700;
+        }
+        .odd-row{
+            background-color: #f8f8f8;
+        }
+        tfoot{
+            background-color: #e6e6e6;
+            font-weight:bold;
+        }
+    </style>
 </head>
-<!-- <body background="./OIP.jpeg " bgcolor="blue" text="yellow"> -->
-<body  bgcolor="red" text="white"></body>
-<p align="left">Text with left align </p>
-<p align="right">Text with right align </p>
-<p align="center">Text with center align </p>
-<p align="Justify">Text with Justify align </p>
-Sapthagiri &hearts; <br>
-Sapthagiri &diams;<br>
-Sapthagiri &spades;<br>
-Sapthagiri &clubs;<br>
-SCE &reg;<br>
-SCE &deg;<br>
-SCE &trade;<br>
-SCE &copy;<br>
-SCE &larr;<br>
-SCE &rarr;<br>
-SCE &uarr;<br>
-SCE &darr;<br>
-SCE &lsquo;<br>
-SCE &rsquo;<br>
-This is an example for left single quote &lsquo; and for right single quote &rsquo;
-SCE &ldquo;<br>
-SCE &rdquo;<br>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="7">Class Time Table</th>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00-10:00</td>
+                <td>Maths</td>
+                <td>English</td>
+                <td>Science</td>
+                <td>History</td>
+                <td>Geography</td>
+                <td rowspan="6">No Classes</td>
+            </tr>
+            
+            <tr class="odd-row">
+                <td>10:00-11:00</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Biology</td>
+                <td class="elective-hours">Computer Science</td>
+                <td class="elective-hours">Art</td>
+            </tr>
 
-Unordered List
-<ul type="square">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JS</li>
-</ul>
+            <tr>
+                <td>11:00-12:00</td>
+                <td class="lab-hours" colspan="2">Physics Lab</td> 
+                <td class="lab-hours" colspan="2">Chemistry Lab</td>
+                <td class="lab-hours">Biology Lab</td>
+            </tr>
 
-Ordered List
-<ol>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JS</li>
-</ol>
+            <tr class="odd-row">
+                <td>12:00-13:00</td>
+                <td class="lunch" colspan="5">Lunch Break</td>
+            </tr>
 
-Table
-<Table border="5px">
-    <tr>
-        <!-- table heading -->
-        <th>Name</th>
-        <th>USN</th>
-        <th>Sem</th>
-        <th>Sec</th>
-    </tr>
-    <!-- -table row -->
-    <tr> 
-        <!-- table data -->
-        <td>Bob</td>
-        <td>1SG22CS999</td>
-        <td>5</td>
-        <td>A</td>
-</Table>
+            <tr>
+                <td>13:00-14:00</td>
+                <td>Maths</td> 
+                <td>English</td> 
+                <td>Science</td> 
+                <td>History</td> 
+                <td>Geography</td>
+            </tr>
 
+            <tr class="odd-row">
+                <td>14:00-15:00</td>
+                <td class="elective-hours">Music</td>
+                <td class="elective-hours">Dance</td>
+                <td class="lab-hours" colspan="3">Computer Science Lab</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7">*Lab hours are highlighted in pink, elective hours are highlighted in light green</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
