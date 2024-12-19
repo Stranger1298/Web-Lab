@@ -144,7 +144,7 @@
     </div> 
     <script> 
         function calculate() { 
-            const num1 = parseFloat(document.getElementById('num1').value); 
+            const num1 = parseFloat(document.getElementById('num1').value); //use to select html element with id="num1"
             const num2 = parseFloat(document.getElementById('num2').value); 
             const operation = document.getElementById('operation').value; 
             let result = ''; 
@@ -156,7 +156,7 @@
             } else { 
                 switch (operation) { 
                     case 'sum': 
-                        result = `Sum: ${num1 + num2}`; 
+                        result = `Sum: ${num1 + num2}`; //in js string is represented by single quote,double quote and template literal
                         break; 
                     case 'product': 
                         result = `Product: ${num1 * num2}`; 
@@ -195,10 +195,10 @@
                 } 
             } 
  
-            const resultDiv = document.getElementById('result'); 
-            resultDiv.innerHTML = result; 
-            resultDiv.classList.remove('show', 'error', 'success'); 
-            resultDiv.classList.add(resultClass, 'show'); 
+            // const resultDiv = document.getElementById('result'); 
+            // resultDiv.innerHTML = result; 
+            // resultDiv.classList.remove('show', 'error', 'success'); 
+            // resultDiv.classList.add(resultClass, 'show'); 
         } 
 </script> 
 </body> 

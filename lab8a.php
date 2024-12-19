@@ -42,19 +42,22 @@ the web page and to display this count of visitors, with relevant headings.  -->
     <h1>Welcome to Our Website</h1>
     <div class="counter">
       <?php
-      $counterFile = 'visitor_count.txt'; 
-      if (file_exists($counterFile)) {
+      $counterFile = 'visitor_count.txt';
+      if (!file_exists($counterFile)) {
         $count = (int)file_get_contents($counterFile);
       } else {
-        $count = 0;
+        $count = 0; //it creates the file and put 0 to it
       }
-      $count++;
-      file_put_contents($counterFile, $count); 
-      echo "<h2>Visitor Count</h2>";
+      $count++; //count will be incremented on each refresh
+      file_put_contents($counterFile, $count); //saving counter value to the file
+      echo '<h2>Visitor Count</h2>';
       echo "<p>You are visitor number: $count</p>";
       ?>
     </div>
   </div>
 </body>
+
+
+<!-- PHP-hypertext preprocessor -->
 
 </html>

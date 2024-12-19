@@ -11,17 +11,17 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM students";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM students"; //display table content
+$result = $conn->query($sql);  //checking how many lines its returning
 
 $students = [];
 if ($result->num_rows > 0) {
-  while ($row = $result->fetch_assoc()) {
+  while ($row = $result->fetch_assoc()) { //iterates over all rows of the table
     $students[] = $row;
   }
 }
 
-function selectionSort(&$arr, $key)
+function selectionSort(&$arr, $key) 
 {
   $n = count($arr);
   for ($i = 0; $i < $n - 1; $i++) {
