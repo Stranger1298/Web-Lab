@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time table</title>
+    <style>
+        body{
+            padding: 20px;
+            margin: 0px;
+            line-height: 1.6;
+        }
+        table{
+            width: 100%;
+            border: 2px solid red;
+        }
+        th,td{
+            padding: 8px;
+            text-align: center;
+            border: 2px solid black;
+        }
+        .lab{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <thead>
+        <tr>
+            <th colspan="7">TIME TABLE</th>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8-9</td>
+            <td>maths</td>
+            <td>phy</td>
+            <td>dance</td>
+            <td>chem</td>
+            <td>bio</td>
+            <td rowspan="6">No class</td>
+        </tr>
+
+        <tr>
+            <td>9-10</td>
+            <td>maths</td>
+            <td>phy</td>
+            <td>bio</td>
+            <td>chem</td>
+            <td>song</td>
+        </tr>
+
+        <tr>
+            <th>10-11</th>
+            <td colspan="5">Lunch</td>
+            
+        </tr>
+
+        <tr>
+            <td>11-12</td>
+            <td>maths</td>
+            <td colspan="2" class="lab">phy lab</td>
+            <td colspan="2" class="lab">bio lab</td>
+        </tr>
+
+        <tr>
+            <td>9-10</td>
+            <td>maths</td>
+            <td>phy</td>
+            <td>bio</td>
+            <td>chem</td>
+            <td>song</td>
+        </tr>
+
+        <tr>
+            <td>9-10</td>
+            <td>maths</td>
+            <td>phy</td>
+            <td>bio</td>
+            <td>chem</td>
+            <td>song</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

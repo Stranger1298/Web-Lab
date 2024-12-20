@@ -1,0 +1,68 @@
+<!-- 9) Develop jQuery script (with HTML/CSS) for:  
+a. Appends the content at the end of the existing paragraph and list.  
+b. Change the state of the element with CSS style using animate() method  
+c. Change the color of any div that is animated.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <style>
+        #animate{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">demo para</p>
+    <ul id="list">
+        <li>list item-1</li>
+        <li>list item-2</li>
+    </ul>
+    <button id="appendpara">appendpara</button>
+<div id="animate"></div>
+<button id="animate-btn">animate</button>
+<div id="color_animate"></div>
+
+<div id="expand"></div>
+<button id="expand-btn">expand-btn</button>
+
+<script>
+$(document).ready(function(){
+
+
+    $("#appendpara").click(function(){
+    $("#para").append(" demo append")
+    $("#list").append("<li> append list </li>")
+    })
+
+    $("#animate-btn").click(function(){
+        $("#animate").animate({
+            height:"200px",
+            width:"200px"
+        },1000)
+    })
+
+    $("#expand-btn").click(function(){
+        $("#expand").animate({
+            height:"200px",
+            width:"200px"
+        },{
+            duration:1000,
+            step:function(now,fx){
+                if(fx.prop==="width"){
+                    $(this).css("background-color",`rgb(${Math.round(now)},54,43)`)
+                }
+            }
+        }
+    )
+    })
+
+})
+</script>
+
+</body>
+</html>

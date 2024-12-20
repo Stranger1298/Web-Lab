@@ -97,7 +97,7 @@ selectionSort($students, 'name');
       color: #555;
     }
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
 
       table,
       th,
@@ -141,7 +141,7 @@ selectionSort($students, 'name');
         text-transform: uppercase;
         color: #4A90E2;
       }
-    }
+    } */
   </style>
 </head>
 

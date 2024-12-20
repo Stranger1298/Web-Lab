@@ -1,0 +1,66 @@
+<!-- Program 10) Develop a JavaScript program with Ajax (with HTML/CSS) for:  
+a. Use ajax() method (without Jquery) to add the text content from the text file by sending ajax request.  
+b. Use ajax() method (with Jquery) to add the text content from the text file by sending ajax request.  
+c. Illustrate the use of getJSON() method in jQuery  
+d. Illustrate the use of parseJSON() method to display JSON values.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Ajax program</h1>
+    <h2>without jquery</h2>
+    <button onclick="withoutjquery()">without jquery</button>
+    <pre id="result-a"></pre>
+    
+
+    <h2>with jquery</h2>
+    <button onclick="withjquery()">with jquery</button>
+    <pre id="result-b"></pre>
+
+    <h2>get json</h2>
+    <button onclick="getjson()">get json</button>
+    <pre id="result-c"></pre>
+
+    <h2>parse json</h2>
+    <button onclick="parsejson()">parse json</button>
+    <pre id="result-d"></pre>
+
+    <script>
+        const simulatedData={
+            text:"demo text",
+            json:{
+                name:"bob",
+                usn:6,
+                city:"blr"
+
+            }
+        }
+        function withoutjquery(){
+            document.getElementById("result-a").textContent=simulatedData.text
+        }
+        
+        function withjquery(){
+            $.Deferred(function(deferred){
+                deferred.resolve(simulatedData.text)
+            }).done(function(result){
+                $("#result-b").text(result)
+            })
+        }
+
+
+        function getjson(){
+            $.Deferred(function(deferred){
+                deferred.resolve(simulatedData.json)
+            }).done(function(result){
+                $("#result-c").text(JSON.stringify(result,null,2))
+            })
+        }
+        
+    </script>
+</body>
+</html>

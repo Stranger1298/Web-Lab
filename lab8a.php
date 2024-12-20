@@ -3,7 +3,6 @@ the web page and to display this count of visitors, with relevant headings.  -->
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Visitor Counter</title>
   <style>
