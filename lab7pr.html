@@ -1,0 +1,53 @@
+<!-- Program 7: Develop JavaScript program (with HTML/CSS) for: 
+a) Converting JSON text to JavaScript Object. 
+b) Convert JSON results into a date. 
+c) Converting From JSON To CSV and CSV to JSON. 
+d) Create hash from string using crypto.createHash() method.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2> (1) JSON to jsObject</h2>
+        <textarea  id="json-input" placeholder="Enter JSON input"></textarea>
+        <button onclick="jsontoobj()">Convert</button>
+    </div>
+    <div>
+        <h2> (2) JSON to date</h2>
+        <textarea  id="json-input" placeholder="Enter JSON date"></textarea>
+        <button>Convert</button>
+    </div>
+    <div>
+        <h2> (3) JSON to CSV / CSV to JSON</h2>
+        <textarea  id="json-input" placeholder="Enter JSON OR CSV input"></textarea>
+        <button>Convert to CSV</button>
+        <button>Convert to JSON</button>
+    </div>
+    <div>
+        <h2> (4) string to hash</h2>
+        <textarea  id="string-input" placeholder="Enter string input"></textarea>
+        <button>Convert</button>
+    </div>
+    <div id="result"></div>
+    
+    <script>
+        function jsontoobj(){
+            try{
+
+                const input=document.getElementById("json-input").value;
+                const obj=JSON.parse(input)
+                document.getElementById('result').innerText = 'converted obj: ' + JSON.stringify(obj)
+            }
+            catch(error){
+                document.getElementById(result).innerText="error"+error.message;
+            }
+
+        }
+    </script>
+</body>
+</html>

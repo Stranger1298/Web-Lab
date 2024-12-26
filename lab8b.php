@@ -163,12 +163,12 @@ selectionSort($students, 'name');
     <tbody>
       <?php foreach ($students as $student): ?>
         <tr>
-          <td data-label="ID"><?php echo htmlspecialchars($student['id']); ?></td>
-          <td data-label="Name"><?php echo htmlspecialchars($student['name']); ?></td>
-          <td data-label="USN"><?php echo htmlspecialchars($student['usn']); ?></td>
-          <td data-label="Branch"><?php echo htmlspecialchars($student['branch']); ?></td>
-          <td data-label="Email"><?php echo htmlspecialchars($student['email']); ?></td>
-          <td data-label="Address"><?php echo htmlspecialchars($student['address']); ?></td>
+          <td ><?php echo htmlspecialchars($student['id']); ?></td>
+          <td ><?php echo htmlspecialchars($student['name']); ?></td>
+          <td ><?php echo htmlspecialchars($student['usn']); ?></td>
+          <td ><?php echo htmlspecialchars($student['branch']); ?></td>
+          <td ><?php echo htmlspecialchars($student['email']); ?></td>
+          <td ><?php echo htmlspecialchars($student['address']); ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
